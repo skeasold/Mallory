@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= link_to "Home", :root%>
+  <%= link_to "Products", :products %>
+
+  <hr>
+
+  <%= yield %>
+
+  <%= debug params %>
 
 </body>
 </html>
