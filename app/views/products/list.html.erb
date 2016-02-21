@@ -1,9 +1,15 @@
+<style>
+img {
+  width: 40px;
+  height: 40px;
+}
+</style>
 <p>
   Products
 </p>
 
 <ul>
   <% @available_products.each do |product| %>
-  <li><%= product.item%> <%= product.price %> More Info <%= link_to "More Info", "/products/#{product.pid}" %></li>
+  <li><%= product.item%> <%= product.price %> <%= link_to "More Info", "/products/#{product.pid}" %> <%= product.quantity %> <img><%= image_tag "#{product.img_file}" %></img></li>
   <% end %>
 </ul>

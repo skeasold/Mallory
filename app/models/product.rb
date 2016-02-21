@@ -7,4 +7,13 @@ class Product
 
   end
 
+  def discount_price
+  case
+  when self.condition == "good"; discount_price = (self.price.to_f * 0.9)
+  when self.condition == "average"; discount_price = (self.price.to_f * 0.8)
+  else; discount_price = (self.price.to_f * 1.0)
+  end
+  discount_price.to_f
+end
+
 end
