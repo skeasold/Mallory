@@ -1,1 +1,9 @@
-Test
+<p>
+  Products
+</p>
+
+<ul>
+  <% @available_products.each do |product| %>
+  <li><%= product.item%> <%= product.price %> More Info <%= link_to "More Info", "/products/#{product.pid}" %></li>
+  <% end %>
+</ul>
