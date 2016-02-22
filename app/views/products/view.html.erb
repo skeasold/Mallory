@@ -1,13 +1,13 @@
 <div class="container">
 <ul>
-<li>Name: <%= @product.name %></li>
+<b><li>Name: <%= @product.name %></li>
 <li>Price: <%= @product.price %></li>
 <li>Description: <%= @product.description %></li>
 <li>W: <%= @product.dimension_w %></li>
 <li>L: <%= @product.dimension_l %></li>
 <li>H: <%= @product.dimension_h %></li>
 <li>Condition: <%= @product.condition %></li>
-<li>Discount Price: <%= @product.discount_price %></li>
+<li>Discount Price: <%= @product.discount_price %></li></b>
 
 <img><%= image_tag @product.img_file %><img>
 </ul>
