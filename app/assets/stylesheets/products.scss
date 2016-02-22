@@ -9,7 +9,8 @@
   margin-right: auto;
 }
 .inner_wrap {
-  border: 1px solid black;
+  border: 1px solid #D1D1D1;
+  border-radius: 5px;
   padding: 5px;
   min-height: 360px;
 }
@@ -18,4 +19,15 @@
   height: 200px;
   text-align: left;
   border: none;
+}
+.old {
+  font-size: 10px;
+  text-decoration:line-through;
+}
+.new {
+  font-weight: bold;
+  color: red;
+}
+h5 {
+  margin-bottom: 5px
 }

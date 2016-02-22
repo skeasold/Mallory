@@ -7,8 +7,13 @@
           <img><%= image_tag "#{product.img_file}" %></img>
         </div>
         <h5><%= product.name %></h5><br>
-        Price: <%= product.price %><br>
-        <%= link_to "More Info", "/products", :class => "btn btn-default btn-sm" %>
+        <% if product.discount_price.to_s.empty? %>
+          <%= number_to_currency(product.price.to_i) %>
+        <% else %>
+          <span class="old">Was: <%= number_to_currency(product.price.to_i) %></span><br>
+          <span class="new">Clearance: <%= number_to_currency(product.discount_price.to_i) %></span>
+        <% end %><br>
+        <%= link_to "More Info", "/products/#{product.pid}", :class => "btn btn-default btn-sm" %>
       </div>
     </div>
     <% end %>
