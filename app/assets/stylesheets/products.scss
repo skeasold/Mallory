@@ -58,3 +58,25 @@ h4 {
 .description_text, .dimensions_text {
   font-size: 12px;
 }
+.corner_nav ul {
+  position: fixed;
+  top: -1px;
+  right: 0px;
+}
+.corner_nav ul li {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.glyphicon-arrow-left {
+  background-color: #7C0808;
+  padding: 22px;
+  color: #FFFFFF;
+  font-size: 22px;
+}
+.glyphicon-home {
+  background-color: #2D9D86;
+  padding: 22px;
+  color: #FFFFFF;
+  font-size: 22px;
+}
