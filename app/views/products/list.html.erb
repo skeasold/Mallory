@@ -1,22 +1,16 @@
-
-<style>
-img {
-  width: 10px;
-  height: 10px;
-}
-</style>
-<p>
-  Products
-</p>
-
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <%= product.name %>
-      <%= product.price %>
-      <%= link_to "More Info", "products/#{product.pid}" %>
-      <%= product.quantity %>
-      <img><%= image_tag "#{product.img_file}" %></img>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-sm-3 center-block">
+      <div class="inner_wrap">
+        <div class="thumbnail center-block">
+          <img><%= image_tag "#{product.img_file}" %></img>
+        </div>
+        <h5><%= product.name %></h5><br>
+        Price: <%= product.price %><br>
+        <%= link_to "More Info", "/products", :class => "btn btn-default btn-sm" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
