@@ -31,3 +31,30 @@
 h5 {
   margin-bottom: 5px
 }
+.product_single_view {
+  width: 450px;
+  height: 450px;
+}
+.col-md-8 {
+  text-align: center;
+}
+.col-md-4 {
+  text-align: left;
+}
+.product_title {
+  background-color: #F2C40D;
+}
+h4 {
+  font-weight: normal;
+}
+.price_title {
+  background-color: #BFF6EB;
+  margin-bottom: 8px;
+}
+.description_title, .dimensions_title {
+  background-color: #EEEEEE;
+  margin: 8px 0px 8px 0px;
+}
+.description_text, .dimensions_text {
+  font-size: 12px;
+}

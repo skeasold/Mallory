@@ -1,15 +1,25 @@
 <div class="container">
-<ul>
-<b><li>Name: <%= @product.name %></li>
-<li>Price: <%= @product.price %></li>
-<li>Description: <%= @product.description %></li>
-<li>W: <%= @product.dimension_w %></li>
-<li>L: <%= @product.dimension_l %></li>
-<li>H: <%= @product.dimension_h %></li>
-<li>Condition: <%= @product.condition %></li>
-<li>Discount Price: <%= @product.discount_price %></li></b>
-
-<img><%= image_tag @product.img_file %><img>
-</ul>
-
+  <div class="row">
+    <div class="col-md-8 center-block">
+      <%= image_tag @product.img_file, :class => "product_single_view" %>
+    </div>
+    <div class="col-md-4">
+      <div class="product_title"><h4><%= @product.name %></h4></div>
+      <div class="price_title">Price</div>
+      <% if @product.discount_price.to_s.empty? %>
+        <%= number_to_currency(@product.price.to_i) %>
+      <% else %>
+        <span class="old">Was: <%= number_to_currency(@product.price.to_i) %></span><br>
+        <span class="new">Clearance: <%= number_to_currency(@product.discount_price.to_i) %></span>
+      <% end %>
+      <div class="description_title">Description</div>
+      <div class="description_text"><%= @product.description %></div>
+      <div class="dimensions_title">Dimensions</div>
+      <div class="dimensions_text">
+        Width: <%= @product.dimension_w %><br>
+        Length: <%= @product.dimension_l %><br>
+        Height: <%= @product.dimension_h %><br>
+      </div>
+    </div>
+  </div>
 </div>
